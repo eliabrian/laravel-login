@@ -40,6 +40,6 @@ class LoginController extends Controller
             return redirect()->intended('/user');
         }
 
-        return back()->withErrors(['email' => 'Email are not registered.']);
+        return back()->withErrors(['email' => [trans('auth.failed')]]);
     }
 }
